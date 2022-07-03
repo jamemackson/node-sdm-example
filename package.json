@@ -1,0 +1,15 @@
+{
+  "name": "node-sdm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "docker build -f ./Dockerfile -t node-sdm:local . ",
+    "run:repl": "docker run -it --env SDM_ADMIN_TOKEN=$SDM_ADMIN_TOKEN --env DATABASE_URL=postgres://foo@bar@127.0.0.1:15432/upsie_dev node-sdm:local /bin/bash",
+    "start": "./start-sdm.sh && node index.js"
+  },
+  "dependencies": {
+    "pg": "^8.7.3",
+    "pg-connection-string": "^2.5.0"
+  }
+}
