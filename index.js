@@ -5,7 +5,7 @@ const { promisify } = require("util");
 (async () => {
   const reviewappName = process.argv[2];
   if (!reviewappName) {
-    log.error("must specify review app name as first argument");
+    console.error("must specify review app name as first argument");
     // eslint-disable-next-line no-process-exit
     process.exit();
   }

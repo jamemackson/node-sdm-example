@@ -11,7 +11,7 @@ echo "sdm starting..."
 # starts listener manually
 sdm listen --daemon &
 # attempts sdm status until successful
-until sdm status &> /dev/null;
+until sdm ready &> /dev/null;
 do
   sleep 1
   echo "waiting for SDM to start..."
